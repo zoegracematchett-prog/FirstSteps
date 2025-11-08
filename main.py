@@ -57,6 +57,7 @@ def main() -> None:
     parser.add_argument("--interval", type=float, default=0.12, help="Seconds between frames")
     parser.add_argument("--flash", action="store_true", help="Use ANSI blink effect (if supported)")
     parser.add_argument("--font", type=str, default="standard", help="pyfiglet font to use")
+    parser.add_argument("--exclaim", type=int, default=3, help="Number of exclamation marks to append (default: 3)")
     args = parser.parse_args()
 
     # graceful Ctrl+C
@@ -73,7 +74,7 @@ def main() -> None:
     blink = "\x1b[5m" if args.flash else ""
     reset = Style.RESET_ALL
 
-    text = "Zoe is amazing"
+    text = "Zoe is amazing" + "!" * args.exclaim
 
     for i in range(args.count):
         clear_screen()

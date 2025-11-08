@@ -17,5 +17,6 @@ Options
 - `--interval S` seconds between frames (default 0.12)
 - `--flash` enable ANSI blink (may be ignored by some terminals)
 - `--font NAME` pyfiglet font name (e.g., slant, standard, small)
+ - `--exclaim N` append N exclamation marks to the message (default 3)
 
 On Windows, run this in the regular PowerShell or Windows Terminal to see colors.
